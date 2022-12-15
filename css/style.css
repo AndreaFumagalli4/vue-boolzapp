@@ -10,10 +10,27 @@ div.container {
     padding: 0;
 }
 
+img.user-image{
+    overflow: hidden;
+    border-radius: 20px;
+}
+
 section#chats {
     background-color: lime;
     height: 100%;
     width: 34%;
+}
+
+section#profile-user {
+    height: 50px;
+}
+
+div#user img {
+    height: 35px;
+}
+
+div#user span {
+    font-size: .8rem;
 }
 
 section#conversation {
@@ -21,3 +38,6 @@ section#conversation {
     height: 100%;
     width: 66%;
 }
+
+
+
