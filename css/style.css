@@ -1,5 +1,10 @@
 body{
     font-family: 'Roboto', sans-serif;
+    background-color: #dadbd2;
+}
+
+section#my_bg {
+    background-color: #009688;
 }
 
 div.container {
@@ -8,6 +13,8 @@ div.container {
     margin: auto;
     padding: 0;
     border: 1px solid rgb(237, 234, 234);
+    background-color: white;
+    z-index: 3;
 }
 
 img.user-image{

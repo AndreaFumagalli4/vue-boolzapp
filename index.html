@@ -26,6 +26,8 @@
 
         <div id="app">
 
+            <section id="my_bg"></section>
+
             <main>
                 <div class="container my-3 d-flex">
                     <!-- Chats section -->
@@ -107,32 +109,26 @@
                         </section>
                         <!-- Main chat section -->
                         <section id="chat" class="d-flex flex-column">
-                            <div class="sent-message">
-                                <span>
-                                    messaggio 2
+                            <div v-for="(contact, contactIndex) in contacts" 
+                            :class="(contact.messages.status === 'sent') ? 'sent-message' : 'recive-message' ">
+                                <span >
+                                    {{ contact.messages.message }}
                                 </span>
                                 <span class="time text-secondary">
-                                    12.00
+                                    12:00
                                 </span>
                             </div>
-                            <div class="recive-message">
-                                <span>
-                                    messaggio 1
-                                </span>
-                                <span class="time text-secondary">
-                                    12.00
-                                </span>
-                            </div>
+                            
                         </section>
                         <!-- New message section -->
                         <section id="new-message">        
                             <div class="input-group input-group p-2">
                                 <span class="input-group-text" id="inputGroup-sizing-sm">
-                                    <i class="fa-regular fa-face-smile text-secondary px-4"></i>
+                                    <i class="fa-regular fa-face-smile text-secondary px-2"></i>
                                 </span>
                                 <input type="text" class="form-control" placeholder="Scrivi un messaggio" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
                                 <span class="input-group-text" id="inputGroup-sizing">
-                                    <i class="fa-solid fa-microphone text-secondary px-4"></i>
+                                    <i class="fa-solid fa-microphone text-secondary px-2"></i>
                                 </span>
                             </div>
                         </section>
