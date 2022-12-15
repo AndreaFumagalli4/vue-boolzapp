@@ -3,7 +3,6 @@ body{
 }
 
 div.container {
-    /* background-color: magenta; */
     width: 80%;
     height: 95vh;
     margin: auto;
@@ -15,6 +14,8 @@ img.user-image{
     overflow: hidden;
     border-radius: 20px;
 }
+
+/* Chats section */
 
 section#chats {
     height: 100%;
@@ -87,8 +88,9 @@ div.user span.message_time {
     right: 10px;
 }
 
+/* Conversation section */
+
 section#conversation {
-    /* background-color: aqua; */
     height: 100%;
     width: 66%;
 }
