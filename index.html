@@ -66,12 +66,12 @@
                         <!-- Chats view section -->
                         <section id="chats-view">
                             <ul>
-                                <li>
+                                <li v-for="(element, index) in contacts">
                                     <div class="user py-2 d-flex position-relative">
-                                        <img class="user-image" src="./img/avatar_1.jpg" alt="User Profile Image">
+                                        <img class="user-image" :src="`./img/avatar${element.avatar}.jpg`" alt="User Profile Image">
                                         <div class="d-flex flex-column lh-sm ps-2">
                                             <span>
-                                                Michele
+                                                {{ element.name }}
                                             </span>
                                             <span class="text-secondary">
                                                 Ultimo messaggio inviato
@@ -139,6 +139,7 @@
                     </section>
                 </div>
             </main>
+
         </div>
         
         <!-- JS -->
