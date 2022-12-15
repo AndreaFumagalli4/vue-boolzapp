@@ -29,8 +29,8 @@
             <main>
                 <div class="container my-3 d-flex">
                     <section id="chats">
-                        <section id="profile-user" class="d-flex justify-content-between">
-                            <div id="user" class="p-2">
+                    <section class="profile-user d-flex justify-content-between">
+                            <div class="user p-2">
                                 <img class="user-image" src="./img/avatar_io.jpg" alt="User Profile Image">
                                 <span class="ps-1">Sofia</span>
                             </div>
@@ -63,13 +63,48 @@
                         </section>
 
                         <section id="chats-view">
-                            
+
                         </section>
                     
                     </section>
 
 
-                    <section id="conversation">
+                    <section id="conversation" class="d-flex flex-column">
+
+                        <section class="profile-user d-flex justify-content-between">
+                            <div class="user p-2 d-flex">
+                                <img class="user-image" src="./img/avatar_1.jpg" alt="User Profile Image">
+                                <div class="d-flex flex-column justify-content-center lh-sm ps-2">
+                                    <span>
+                                        Michele
+                                    </span>
+                                    <span class="text-secondary">
+                                        Ultimo accesso
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fa-solid fa-magnifying-glass text-secondary"></i>
+                                <i class="fa-solid fa-paperclip px-3 text-secondary"></i>
+                                <i class="fa-solid fa-ellipsis-vertical pe-3 text-secondary"></i>
+                            </div>
+                        </section>
+
+                        <section id="chat">
+                            <img src="./img/mine.jpg" alt="Background image">
+                        </section>
+
+                        <section id="new-message">        
+                            <div class="input-group input-group p-2">
+                                <span class="input-group-text" id="inputGroup-sizing-sm">
+                                    <i class="fa-regular fa-face-smile text-secondary px-4"></i>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Scrivi un messaggio" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                                <span class="input-group-text" id="inputGroup-sizing">
+                                    <i class="fa-solid fa-microphone text-secondary px-4"></i>
+                                </span>
+                            </div>
+                        </section>
 
                     </section>
                 </div>
