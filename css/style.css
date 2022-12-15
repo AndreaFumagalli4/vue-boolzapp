@@ -21,7 +21,8 @@ section#chats {
     width: 34%;
 }
 
-section#profile-user {
+section#profile-user,
+section#silence-notifications {
     height: 50px;
 }
 
@@ -29,8 +30,29 @@ div#user img {
     height: 35px;
 }
 
-div#user span {
-    font-size: .8rem;
+div#user span,
+div#active_notifications span {
+    font-size: .75rem;
+}
+
+div#bell {
+    background-color: white;
+    padding: .3rem .5rem;
+    border-radius: 1.3rem;
+    margin: .5rem .5rem .5rem 1rem;
+}
+
+section#silence-notifications {
+    background-color: #8edafc;
+}
+
+div#bell i {
+    color: #8edafc;
+}
+
+div#active_notifications a {
+    color: #6d9398;
+    font-size: .6rem;
 }
 
 section#conversation {
