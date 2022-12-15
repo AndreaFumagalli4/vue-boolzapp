@@ -8,6 +8,7 @@ div.container {
     height: 95vh;
     margin: auto;
     padding: 0;
+    border: 1px solid rgb(237, 234, 234);
 }
 
 img.user-image{
@@ -16,7 +17,6 @@ img.user-image{
 }
 
 section#chats {
-    background-color: lime;
     height: 100%;
     width: 34%;
 }
@@ -34,7 +34,8 @@ div.user img {
     height: 35px;
 }
 
-div.user span {
+div.user span,
+section#chat span {
     font-size: .75rem;
 }
 
@@ -62,6 +63,30 @@ div#active_notifications a {
     font-size: .7rem;
 }
 
+section#chats-view ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+section#chats-view ul li {
+    padding-left: 1rem;
+    border-bottom: 1px solid rgb(237, 234, 234);
+}
+
+section#chats-view ul li:hover {
+    background-color: #e9ebeb;
+}
+
+div.user span.text-secondary {
+    font-size: .6rem;
+}
+
+div.user span.message_time {
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
 section#conversation {
     /* background-color: aqua; */
     height: 100%;
@@ -70,16 +95,38 @@ section#conversation {
 
 section#chat {
     height: 100%;
+    background-image: url('../img/mine.jpg');
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
 }
 
-section#chat img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+section#chat span.time {
+    font-size: .5rem;
+    position: absolute;
+    right: 5px;
+    bottom: 2px;
 }
 
-section#new-message {
-    height: 50px;
+div.recive-message,
+div.sent-message {
+    padding: .75rem;
+    width:35%;
+    border-radius: 8px;
+    margin-top: 1rem;
+    position: relative;
+}
+
+div.recive-message {
+    background-color: white;
+    margin-left: 2rem;
+    justify-content: start;
+}
+
+div.sent-message {
+    background-color: #d5f9ba;    
+    margin-right: 2rem;
+    margin-left: auto;
 }
 
 section#new-message div {
