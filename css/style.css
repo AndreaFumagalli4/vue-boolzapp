@@ -3,8 +3,21 @@ body{
 }
 
 div.container {
-    background-color: magenta;
+    /* background-color: magenta; */
     width: 80%;
     height: 95vh;
     margin: auto;
+    padding: 0;
+}
+
+section#chats {
+    background-color: lime;
+    height: 100%;
+    width: 34%;
+}
+
+section#conversation {
+    background-color: aqua;
+    height: 100%;
+    width: 66%;
 }
