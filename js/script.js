@@ -168,5 +168,14 @@ createApp({
                 }
             ]
         }
+    },
+
+    methods : {
+        cycleContacts() {
+            this.contacts.forEach(element => {
+                console.log(element.messages)
+            });
+        }
     }
+
 }).mount('#app');

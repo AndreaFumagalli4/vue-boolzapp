@@ -34,7 +34,7 @@
                     <section id="chats">
                         <!-- Profile user section -->
                         <section class="profile-user d-flex justify-content-between">
-                            <div class="user p-2">
+                            <div class="user p-2" @click="cycleContacts()">
                                 <img class="user-image" src="./img/avatar_io.jpg" alt="User Profile Image">
                                 <span class="ps-1">Sofia</span>
                             </div>
@@ -109,7 +109,7 @@
                         </section>
                         <!-- Main chat section -->
                         <section id="chat" class="d-flex flex-column">
-                            <div v-for="(contact, contactIndex) in contacts" 
+                            <!-- <div  
                             :class="(contact.messages.status === 'sent') ? 'sent-message' : 'recive-message' ">
                                 <span >
                                     {{ contact.messages.message }}
@@ -117,7 +117,7 @@
                                 <span class="time text-secondary">
                                     12:00
                                 </span>
-                            </div>
+                            </div> -->
                             
                         </section>
                         <!-- New message section -->
