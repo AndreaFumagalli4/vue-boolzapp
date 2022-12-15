@@ -30,8 +30,7 @@ div#user img {
     height: 35px;
 }
 
-div#user span,
-div#active_notifications span {
+div#user span {
     font-size: .75rem;
 }
 
@@ -50,9 +49,13 @@ div#bell i {
     color: #8edafc;
 }
 
+div#active_notifications span {
+    font-size: .8rem;
+}
+
 div#active_notifications a {
     color: #6d9398;
-    font-size: .6rem;
+    font-size: .7rem;
 }
 
 section#conversation {
