@@ -201,12 +201,9 @@ createApp({
             this.contacts[index].messages.push(newReplyMessage);
         },
 
-        searchAtInput(index) {
-            const arrayString = this.contacts[index].name.toLowerCase();
-            const newArrayString = arrayString.split('');
-            console.log(newArrayString);
-            newArrayString.forEach(letter => {
-                console.log(letter);
+        searchAtInput() {
+            this.contacts.forEach(element => {
+                console.log(element.name);
             });
         },    
     }
