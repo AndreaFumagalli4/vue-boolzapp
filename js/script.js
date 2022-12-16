@@ -185,12 +185,21 @@ createApp({
             }
             this.contacts[index].messages.push(newMessageContent);
             this.clearMessage();
+            setTimeout(this.replyMessage, 1000, index);
         },
 
         clearMessage() {
             this.newMessage = '';
-        }
+        },
 
+        replyMessage(index) {
+            const newReplyMessage = {
+                date : '12:01',
+                message : 'Ok!',
+                status : 'received'
+            }
+            this.contacts[index].messages.push(newReplyMessage);
+        },
     }
 
 }).mount('#app');
