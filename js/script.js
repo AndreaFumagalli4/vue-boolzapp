@@ -200,6 +200,16 @@ createApp({
             }
             this.contacts[index].messages.push(newReplyMessage);
         },
+
+        searchAtInput(index) {
+            const arrayString = this.contacts[index].name;
+            // arrayString.toLowerCase();
+            const newArrayString = arrayString.split('');
+            console.log(newArrayString);
+            newArrayString.forEach(letter => {
+                console.log(letter);
+            });
+        },    
     }
 
 }).mount('#app');
