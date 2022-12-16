@@ -126,7 +126,7 @@
                                 <span class="input-group-text" id="inputGroup-sizing-sm">
                                     <i class="fa-regular fa-face-smile text-secondary px-2"></i>
                                 </span>
-                                <input type="text" class="form-control" placeholder="Scrivi un messaggio" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                                <input type="text" v-model="newMessage" @keyup.enter="inputNewMessage(newMessage, activeIndex)" class="form-control" placeholder="Scrivi un messaggio" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
                                 <span class="input-group-text" id="inputGroup-sizing">
                                     <i class="fa-solid fa-microphone text-secondary px-2"></i>
                                 </span>

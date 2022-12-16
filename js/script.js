@@ -4,6 +4,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            newMessage : '',
             activeIndex : 0,
             contacts: [
                 {
@@ -175,6 +176,20 @@ createApp({
         clickOnContact(newIndex) {
             this.activeIndex = newIndex;
         },
+
+        inputNewMessage(content, index) {
+            const newMessageContent = {
+                date : '12:00',
+                message : content,
+                status : 'sent'
+            }
+            this.contacts[index].messages.push(newMessageContent);
+            this.clearMessage();
+        },
+
+        clearMessage() {
+            this.newMessage = '';
+        }
 
     }
 
