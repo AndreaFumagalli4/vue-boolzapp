@@ -66,7 +66,7 @@
                         <!-- Chats view section -->
                         <section id="chats-view">
                             <ul>
-                                <li v-for="(element, index) in contacts">
+                                <li v-for="(element, index) in contacts" @click="clickOnContact(index)">
                                     <div class="user py-2 d-flex position-relative">
                                         <img class="user-image" :src="`./img/avatar${element.avatar}.jpg`" alt="User Profile Image">
                                         <div class="d-flex flex-column lh-sm ps-2">
@@ -114,7 +114,7 @@
                                     {{ message.message }}
                                 </span>
                                 <span class="time text-secondary">
-                                    12:00
+                                    {{ message.date }}
                                 </span>
                             </div>
                             

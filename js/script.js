@@ -172,11 +172,10 @@ createApp({
     },
 
     methods : {
-        cycleContacts() {
-            this.contacts.forEach(element => {
-                console.log(element.messages)
-            });
-        }
+        clickOnContact(newIndex) {
+            this.activeIndex = newIndex;
+        },
+
     }
 
 }).mount('#app');
