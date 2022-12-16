@@ -84,15 +84,16 @@
                             </ul>
                         </section>
                     </section>
+
                     <!-- Conversation section -->
                     <section id="conversation" class="d-flex flex-column">
                         <!-- Up profile user section -->
                         <section class="profile-user d-flex justify-content-between">
                             <div class="user p-2 d-flex">
-                                <img class="user-image" src="./img/avatar_1.jpg" alt="User Profile Image">
+                                <img class="user-image" :src="`./img/avatar${contacts[activeIndex].avatar}.jpg`" alt="User Profile Image">
                                 <div class="d-flex flex-column justify-content-center lh-sm ps-2">
                                     <span>
-                                        Michele
+                                        {{ contacts[activeIndex].name }}
                                     </span>
                                     <span class="text-secondary">
                                         Ultimo accesso
@@ -109,12 +110,12 @@
                         <section id="chat" class="d-flex flex-column">
                             <div v-for="message in contacts[activeIndex].messages"
                             class="message"
-                            :class="(message.status === 'sent') ? 'sent-message' : 'recive-message' ">
-                                <span >
+                            :class="(message.status === 'sent') ? 'sent-message' : 'receive-message' ">
+                                <span>
                                     {{ message.message }}
                                 </span>
                                 <span class="time text-secondary">
-                                    {{ message.date }}
+                                    12:00
                                 </span>
                             </div>
                             

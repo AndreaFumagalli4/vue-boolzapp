@@ -84,6 +84,7 @@ section#chats-view ul li {
 
 section#chats-view ul li:hover {
     background-color: #e9ebeb;
+    cursor: pointer;
 }
 
 div.user span.text-secondary {
@@ -109,7 +110,7 @@ section#conversation section.profile-user {
 
 section#chat {
     height: 100%;
-    padding: 1.5rem;
+    padding: 2rem 3rem;
     background-image: url('../img/mine.jpg');
 }
 
@@ -117,26 +118,25 @@ section#chat span.time {
     font-size: .5rem;
     position: absolute;
     right: 5px;
-    bottom: 2px;
+    bottom: -1px;
 }
 
 div.message {
     padding: .5rem .75rem;
-    width: 37.5%;
+    width: 42%;
     border-radius: 8px;
     margin-top: 1rem;
     position: relative;
+    line-height: .85rem;
 }
 
-div.recive-message {
+div.receive-message {
     background-color: white;
-    margin-left: 2rem;
     justify-content: start;
 }
 
 div.sent-message {
     background-color: #d5f9ba;    
-    margin-right: 2rem;
     margin-left: auto;
 }
 
