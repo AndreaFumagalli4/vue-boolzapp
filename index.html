@@ -26,8 +26,6 @@
 
         <div id="app">
 
-            <section id="my_bg"></section>
-
             <main>
                 <div class="container my-3 d-flex">
                     <!-- Chats section -->
@@ -109,15 +107,16 @@
                         </section>
                         <!-- Main chat section -->
                         <section id="chat" class="d-flex flex-column">
-                            <!-- <div  
-                            :class="(contact.messages.status === 'sent') ? 'sent-message' : 'recive-message' ">
+                            <div v-for="message in contacts[activeIndex].messages"
+                            class="message"
+                            :class="(message.status === 'sent') ? 'sent-message' : 'recive-message' ">
                                 <span >
-                                    {{ contact.messages.message }}
+                                    {{ message.message }}
                                 </span>
                                 <span class="time text-secondary">
                                     12:00
                                 </span>
-                            </div> -->
+                            </div>
                             
                         </section>
                         <!-- New message section -->
