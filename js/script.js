@@ -202,8 +202,7 @@ createApp({
         },
 
         searchAtInput(index) {
-            const arrayString = this.contacts[index].name;
-            // arrayString.toLowerCase();
+            const arrayString = this.contacts[index].name.toLowerCase();
             const newArrayString = arrayString.split('');
             console.log(newArrayString);
             newArrayString.forEach(letter => {
