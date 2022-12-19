@@ -62,14 +62,14 @@
                                 <i class="fa-solid fa-magnifying-glass px-2"></i>
                             </span>
                             <input type="text" class="form-control"
-                            @keyup.enter="searchAtInput(userSearch)" v-model="userSearch"
+                            @keyup="searchAtInput(userResearch)" v-model="userResearch"
                             placeholder="Cerca o inizia una nuova chat" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
                         </section>
                         <!-- Chats view section -->
                         <section id="chats-view">
                             <ul>
                                 <li v-for="(element, index) in contacts" @click="clickOnContact(index)"
-                                    :class="(!element.visible) ? 'd-none' : '' ">
+                                    :class="(element.visible) ? '' : 'd-none' ">
                                     <div class="user py-2 d-flex position-relative">
                                         <img class="user-image" :src="`./img/avatar${element.avatar}.jpg`" alt="User Profile Image">
                                         <div class="d-flex flex-column lh-sm ps-2">
