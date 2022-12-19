@@ -4,6 +4,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            userResearch : '',
             newMessage : '',
             activeIndex : 0,
             contacts: [

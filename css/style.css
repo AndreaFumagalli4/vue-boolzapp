@@ -67,9 +67,19 @@ div#active_notifications span {
     font-size: .8rem;
 }
 
+div#active_notifications a,
+section#start-new-chat input::placeholder {
+    font-size: .7rem;
+}
+
 div#active_notifications a {
     color: #6d9398;
-    font-size: .7rem;
+}
+
+section#start-new-chat span,
+section#start-new-chat input {
+    background-color: white; 
+    border-color: rgb(247, 247, 247);
 }
 
 section#chats-view ul {
