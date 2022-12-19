@@ -113,9 +113,11 @@
                         </section>
                         <!-- Main chat section -->
                         <section id="chat" class="d-flex flex-column">
-                            <div v-for="message in contacts[activeIndex].messages"
+                            <div v-for="(message,index) in contacts[activeIndex].messages"
                             class="message position-relative"
-                            :class="(message.status === 'sent') ? 'sent-message' : 'receive-message' ">
+                            :class="(message.status === 'sent') ? 'sent-message' : 'receive-message' "
+                            @click="newClass(index)"
+                            :class="(message.active) ? 'active' : '' ">
                                 <span>
                                     {{ message.message }}
                                 </span>

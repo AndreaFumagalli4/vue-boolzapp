@@ -211,5 +211,16 @@ createApp({
                 }
             });
         },
+
+        newClass(messageIndex) {
+            // const newActiveItems = 'active : false,';
+            // this.contacts[index].messages[index].push(newActiveItems);
+            // console.log(this.contacts[index].messages[index]);
+            this.contacts[messageIndex].messages.forEach(newElement => {
+                newElement.active = false;
+            })
+            console.log(this.contacts[messageIndex].messages);
+            
+        }
     }
 }).mount('#app');

@@ -159,6 +159,11 @@ div.message-menu {
     top: 20px;
     left: 70px;
     border-radius: 10px;
+    display: none;
+}
+
+div.message-menu.active {
+    display: block;
 }
 
 div.message-menu ul li {
