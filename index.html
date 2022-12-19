@@ -58,16 +58,18 @@
                         </section>
                         <!-- Start new chat section -->
                         <section id="start-new-chat" class="input-group input-group-sm p-1">
-                            <span class="input-group-text bg-light" id="inputGroup-sizing-sm" 
-                            @click="searchAtInput()">
+                            <span class="input-group-text bg-light" id="inputGroup-sizing-sm">
                                 <i class="fa-solid fa-magnifying-glass px-2"></i>
                             </span>
-                            <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                            <input type="text" class="form-control"
+                            @keyup.enter="searchAtInput(userSearch)" v-model="userSearch"
+                            placeholder="Cerca o inizia una nuova chat" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
                         </section>
                         <!-- Chats view section -->
                         <section id="chats-view">
                             <ul>
-                                <li v-for="(element, index) in contacts" @click="clickOnContact(index)">
+                                <li v-for="(element, index) in contacts" @click="clickOnContact(index)"
+                                    :class="(!element.visible) ? 'd-none' : '' ">
                                     <div class="user py-2 d-flex position-relative">
                                         <img class="user-image" :src="`./img/avatar${element.avatar}.jpg`" alt="User Profile Image">
                                         <div class="d-flex flex-column lh-sm ps-2">
@@ -127,7 +129,8 @@
                                 <span class="input-group-text" id="inputGroup-sizing-sm">
                                     <i class="fa-regular fa-face-smile text-secondary px-2"></i>
                                 </span>
-                                <input type="text" v-model="newMessage" @keyup.enter="inputNewMessage(newMessage, activeIndex)" class="form-control" placeholder="Scrivi un messaggio" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                                <input type="text" v-model="newMessage" 
+                                @keyup.enter="inputNewMessage(newMessage, activeIndex)" class="form-control" placeholder="Scrivi un messaggio" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
                                 <span class="input-group-text" id="inputGroup-sizing">
                                     <i class="fa-solid fa-microphone text-secondary px-2"></i>
                                 </span>

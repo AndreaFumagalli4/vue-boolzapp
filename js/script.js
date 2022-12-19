@@ -201,10 +201,17 @@ createApp({
             this.contacts[index].messages.push(newReplyMessage);
         },
 
-        searchAtInput() {
+        searchAtInput(inputContent) {
+            console.log(inputContent);
             this.contacts.forEach(element => {
-                console.log(element.name);
+                console.log(element.name.toLowerCase());
+                if (!element.name.includes(inputContent)) {
+                    element.visible = !element.visible;
+                }
+                console.log(element.visible);
             });
+            
+            /** Creare if: SE il nome NON contiene le lettere che scrive l'utente ==> this.visible = !this.visible  */
         },    
     }
 
