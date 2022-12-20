@@ -212,14 +212,16 @@ createApp({
             });
         },
 
-        newClass(messageIndex) {
-            // const newActiveItems = 'active : false,';
-            // this.contacts[index].messages[index].push(newActiveItems);
-            // console.log(this.contacts[index].messages[index]);
+        newMessageProperty(messageIndex) {
             this.contacts[messageIndex].messages.forEach(newElement => {
                 newElement.active = false;
             })
             console.log(this.contacts[messageIndex].messages);
+            this.contacts[messageIndex].messages[messageIndex].active = !this.contacts[messageIndex].messages[messageIndex].active; 
+            console.log(this.contacts[messageIndex].messages[messageIndex].active);
+        },
+
+        viewDropDownMenu() {
             
         }
     }
