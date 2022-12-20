@@ -212,17 +212,22 @@ createApp({
             });
         },
 
-        newMessageProperty(messageIndex) {
-            this.contacts[messageIndex].messages.forEach(newElement => {
+        newMessageProperty(index) {
+            this.contacts[index].messages.forEach(newElement => {
                 newElement.active = false;
-            })
-            console.log(this.contacts[messageIndex].messages);
-            this.contacts[messageIndex].messages[messageIndex].active = !this.contacts[messageIndex].messages[messageIndex].active; 
-            console.log(this.contacts[messageIndex].messages[messageIndex].active);
+            });
         },
 
-        viewDropDownMenu() {
-            
+        switchActive(index) {
+            this.contacts[index].messages[index].active = !this.contacts[index].messages[index].active; 
+        },
+
+        deleteMessage() {
+
         }
+    },
+
+    created() {
+        this.newMessageProperty(this.activeIndex);
     }
 }).mount('#app');

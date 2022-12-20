@@ -85,7 +85,6 @@
                                         </span>
                                     </div>
                                 </li>
-                                
                             </ul>
                         </section>
                     </section>
@@ -116,7 +115,7 @@
                             <div v-for="(message,index) in contacts[activeIndex].messages"
                             class="message position-relative"
                             :class="(message.status === 'sent') ? 'sent-message' : 'receive-message' "
-                            @click="newMessageProperty(index)">
+                            @click="switchActive(index)">
                                 <span>
                                     {{ message.message }}
                                 </span>
@@ -129,7 +128,8 @@
                                         <li class="text-secondary">
                                             Message Info
                                         </li>
-                                        <li class="text-secondary delete_message">
+                                        <li class="text-secondary delete_message"
+                                        @click="deleteMessage()">
                                             Delete Message
                                         </li>
                                     </ul>
